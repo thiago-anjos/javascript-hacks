@@ -6,3 +6,13 @@ let [x, y, ...rest] = numbers;
 console.log(x); // Outputs: 1
 console.log(y); // Outputs: 2
 console.log(rest); // Outputs: [3, 4, 5, 6, 7, 8, 9, 10]
+
+// using in objects
+let user = {
+    name: "John",
+    age: 30
+};
+    
+let { name, age } = user;
+console.log(name); // Outputs: "John"
+console.log(age); // Outputs: 30
