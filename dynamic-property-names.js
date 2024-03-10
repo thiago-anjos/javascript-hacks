@@ -14,4 +14,13 @@ const userInput = {
   
 console.log(user);
 
+let prefix = 'prop';
+
+let obj = {
+  [`${prefix}_name`]: 'John Doe',
+  [`${prefix}_age`]: 30
+};
+
+console.log(obj); // Output: { prop_name: 'John Doe', prop_age: 30 }
+
   
