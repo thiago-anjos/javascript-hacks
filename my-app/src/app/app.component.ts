@@ -7,19 +7,25 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  public contentReady:boolean = false;
-  
-  ngOnInit(){
-    this.checkList()
+  public contentReady: boolean = false;
+
+  async ngOnInit() {
+    try {
+      await this.checkList();
+      this.contentReady = true;
+    } catch (error) {
+      this.contentReady = true;
+    }
   }
 
-  checkList(){
+  checkList() {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
-        this.contentReady = true;
+        resolve(true);
       }, 5000);
+    });
   }
-
 }
