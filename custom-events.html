@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Selection Event</title>
+  </head>
+  <body>
+    <p>Select some text in this paragraph to trigger the event.</p>
+
+    <script>
+      // Event Initialization: Listen for selection changes
+      document.addEventListener("selectionchange", function () {
+        const selection = window.getSelection().toString();
+        if (selection) {
+          // Dispatching the Event: Dispatch custom event with selected text
+          document.dispatchEvent(
+            new CustomEvent("textSelect", {
+              detail: { selectedText: selection },
+            })
+          );
+        }
+      });
+
+      // Subscribing to Custom Events: Subscribe to the textSelect event
+      document.addEventListener("textSelect", function (event) {
+        // Log the selected text to the console
+        console.log("Selected text:", event.detail.selectedText);
+      });
+    </script>
+  </body>
+</html>
