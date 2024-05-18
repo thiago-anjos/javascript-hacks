@@ -1,0 +1,17 @@
+{
+  "name": "javascript-hacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "console.count.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
