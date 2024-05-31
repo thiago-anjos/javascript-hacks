@@ -1,17 +1,6 @@
 {
-  "name": "javascript-hacks",
-  "version": "1.0.0",
-  "description": "",
-  "main": "console.count.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit"
+  "dependencies": {
+    "eslint": "^9.3.0"
   },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "type": "module"
 }
